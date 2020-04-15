@@ -37,13 +37,16 @@ export class App extends Component {
   
   render() {
     return (
-      this.state.grid.map((row, i) => (
-        <div key={i}>
-        {row.map((pixel, i) => (
-          <div key={`${i}-pixel`} style={{display: 'inline-block', height: '20px', width: '20px', backgroundColor: pixel}}></div>
+      <div>
+        <div style={{textAlign: "center", marginBottom: "20px"}}>Pixel Token</div>
+        {this.state.grid.map((row, i) => (
+          <div key={i}>
+          {row.map((pixel, i) => (
+            <div key={`${i}-pixel`} style={{display: 'inline-block', height: '20px', width: '20px', backgroundColor: pixel}}></div>
+          ))}
+          </div>
         ))}
-        </div>
-      ))
+      </div>
     )
   }
 }
