@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { PixelGrid, Pixel, Heading, Row, AppWrapper } from './styles/App';
 
 const { Component } = React;
 
@@ -17,35 +18,37 @@ const generateGrid = (grid) => {
       return generateHex()
     })
   })
-  
+
 }
 
 export class App extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       grid: Array(16).fill(Array(16).fill(""))
     }
   };
-  
+
   componentDidMount() {
     console.log(generateGrid(this.state.grid))
     this.setState({grid: generateGrid(this.state.grid)})
   }
 
-  
+
   render() {
     return (
       <div>
-        <div style={{textAlign: "center", marginBottom: "20px"}}>Pixel Token</div>
-        {this.state.grid.map((row, i) => (
-          <div key={i}>
-          {row.map((pixel, i) => (
-            <div key={`${i}-pixel`} style={{display: 'inline-block', height: '20px', width: '20px', backgroundColor: pixel}}></div>
+        <Heading>Pixel Token</Heading>
+        <PixelGrid>
+          {this.state.grid.map((row, i) => (
+            <Row key={i}>
+              {row.map((pixel, i) => (
+                <Pixel key={`${i}-pixel`} backgroundColor={pixel}/>
+              ))}
+            </Row>
           ))}
-          </div>
-        ))}
+        </PixelGrid>
       </div>
     )
   }
