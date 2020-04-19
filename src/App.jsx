@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { PixelGrid, Pixel, Heading, Row, AppWrapper } from './styles/App';
+import Web3 from 'web3'
 
 const { Component } = React;
 
