@@ -1,9 +1,9 @@
-pragma solidity ^0.6.4;
+pragma solidity ^0.5.0;
 
 import '../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 
-contract PixelToken is ERC721Token {
-    constructor(string _name, string_symbol) public {
+contract PixelToken is ERC721Full {
+    constructor(string memory _name, string memory _symbol) public {
 }
 
 
@@ -14,9 +14,9 @@ contract PixelToken is ERC721Token {
 function mintToken(
    address _to,
     uint256 _tokenId,
-    string _tokenURI
+    string memory _tokenURI
 )public{
-    super.mint(_to, _tokenId);
-    super.setTokenURI(_tokenId, _tokenURI);
+    super._mint(_to, _tokenId);
+    super._setTokenURI(_tokenId, _tokenURI);
 }
 }
