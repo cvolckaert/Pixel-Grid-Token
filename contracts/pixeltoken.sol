@@ -3,8 +3,8 @@ pragma solidity ^0.6.4;
 import '../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 
 contract PixelToken is ERC721Token {
-    constructor(string _name, string_symbol)
-{}
+    constructor(string _name, string_symbol) public {
+}
 
 
 /*
