@@ -5,6 +5,8 @@ import Web3 from 'web3'
 
 const { Component } = React;
 
+/// build/contracts/PixelToken.json
+
 const generateHex = () => {
   let length = 6;
   let chars = '0123456789ABCDEF';
