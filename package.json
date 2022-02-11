@@ -4,7 +4,7 @@
   "description": "",
   "main": "truffle-config.js",
   "dependencies": {
-    "@openzeppelin/contracts": "^2.5.0",
+    "@openzeppelin/contracts": "^4.4.2",
     "create-react-app": "^3.4.1",
     "ganache-cli": "^6.9.1",
     "openzeppelin-solidity": "^2.5.0",
